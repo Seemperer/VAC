@@ -11,8 +11,13 @@ road_b = []
 road_c = []
 road_d = []
 
-# Vehicle types with approximate lengths
-vehicles = {'Van': 6, 'Car': 4, 'Bus': 10, 'Two-wheeler': 3}
+# Colors
+GRASS = (34, 139, 34)
+ROAD = (50, 50, 50)
+WHITE = (255, 255, 255)
+RED = (255, 70, 70)
+GREEN = (70, 255, 70)
+ORANGE = (255, 165, 0)
 
 font = pygame.font.SysFont("Arial", 46, bold=True)
 timer_font = pygame.font.SysFont("Arial", 26)
