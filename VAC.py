@@ -14,7 +14,9 @@ road_d = []
 # Vehicle types with approximate lengths
 vehicles = {'Van': 6, 'Car': 4, 'Bus': 10, 'Two-wheeler': 3}
 
-print("A scenario is being created where two roads intersect each other, and a simulation on the Vehicle Actuation System will be used")
+font = pygame.font.SysFont("Arial", 46, bold=True)
+timer_font = pygame.font.SysFont("Arial", 26)
+small_font = pygame.font.SysFont("Arial", 18)
 
 # Simulate random vehicles arriving on roads
 for i in range(1, random.randrange(5, 60)):
