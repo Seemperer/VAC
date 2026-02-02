@@ -6,6 +6,7 @@ import sys
 pygame.init()
 
 # Lists representing vehicles on each road
+road type = ['Highway', 'T-junction','+-JUNCTION'']
 road_a = []
 road_b = []
 road_c = []
