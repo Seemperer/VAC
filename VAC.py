@@ -11,7 +11,7 @@ elif road_type == "T-junction":
 else:
     roads_count = 4
 
-# vehicle times
+# vehicle crossing time
 vehicle_time = {
     "Car": 2,
     "Van": 3,
@@ -19,40 +19,42 @@ vehicle_time = {
     "Two-wheeler": 1
 }
 
-# create roads
-roads = []
-for i in range(roads_count):
-    roads.append([])
+# create empty roads
+roads = [[] for _ in range(roads_count)]
 
 # add 50 vehicles
 for i in range(50):
     road_no = i % roads_count
-    v = random.choice(list(vehicle_time.keys()))
-    roads[road_no].append(v)
+    vehicle = random.choice(list(vehicle_time.keys()))
+    roads[road_no].append(vehicle)
 
-# show basic info
-print("\nTRAFFIC SIGNAL SIMULATION")
+# basic info
+print()
+print("TRAFFIC SIGNAL SIMULATION")
 print("Road Type:", road_type)
 print("Number of Roads:", roads_count)
-print("Total Vehicles: 50\n")
+print("Total Vehicles: 50")
+print()
 
-# show vehicles on each road
+# vehicles on each road
 for i in range(roads_count):
     print("Road", i + 1, "vehicles:", len(roads[i]))
 
-print("\nSignal Time for Each Road:")
+print()
+print("Signal Time for Each Road:")
 
-# calculate and print signal time
+# signal time calculation
 for i in range(roads_count):
     signal_time = (len(roads[i]) / 50) * 60
     if signal_time < 5:
         signal_time = 5
     print("Road", i + 1, ":", round(signal_time, 2), "seconds")
 
-print("\nVehicle crossing time:")
+print()
+print("Vehicle crossing time:")
 
-# show vehicle times
+# vehicle crossing details
 for i in range(roads_count):
     print("Road", i + 1)
-    for v in roads[i]:
-        print(" ", v, "takes", vehicle_time[v], "seconds")
+    for vehicle in roads[i]:
+        print(" ", vehicle, "takes", vehicle_time[vehicle], "seconds")

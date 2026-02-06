@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ad3f790-897c-48b2-bc1d-00735de31807" name="Changes" comment="I made changes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC.py" beforeDir="false" afterPath="$PROJECT_DIR$/VAC.py" afterDir="false" />
-    </list>
+    <list default="true" id="0ad3f790-897c-48b2-bc1d-00735de31807" name="Changes" comment="I made changes the final code" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -166,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770015337971</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="I made changes the final code">
+      <option name="closed" value="true" />
+      <created>1770352983055</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1770352983055</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +194,8 @@
     <MESSAGE value="Commit this change" />
     <MESSAGE value="The whole new code" />
     <MESSAGE value="I made changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="I made changes" />
+    <MESSAGE value="I made changes the final code" />
+    <option name="LAST_COMMIT_MESSAGE" value="I made changes the final code" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/VAC$VAC.coverage" NAME="VAC Coverage Results" MODIFIED="1770015814249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\Priya\PycharmProjects\VAC " />
