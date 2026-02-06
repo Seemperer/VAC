@@ -1,62 +1,58 @@
 import random
-import pygame
-import sys
 
-# Initialize pygame
-pygame.init()
+# choose road type
+road_type = random.choice(["Highway", "T-junction", "Plus junction"])
 
-# Screen (optional, but keeps pygame happy)
-screen = pygame.display.set_mode((600, 400))
-pygame.display.set_caption("Vehicle Actuation System Simulation")
+# number of roads
+if road_type == "Highway":
+    roads_count = 2
+elif road_type == "T-junction":
+    roads_count = 3
+else:
+    roads_count = 4
 
-# Road types
-road_types = ['Highway', 'T-junction', '+-JUNCTION']
-
-# Lists representing vehicles on each road
-road_a = []
-road_b = []
-road_c = []
-road_d = []
-
-# Vehicle types with approximate lengths
-vehicles = {
-    'Van': 6,
-    'Car': 4,
-    'Bus': 10,
-    'Two-wheeler': 3
+# vehicle times
+vehicle_time = {
+    "Car": 2,
+    "Van": 3,
+    "Bus": 5,
+    "Two-wheeler": 1
 }
 
-print(
-    "A scenario is being created where two roads intersect each other, "
-    "and a simulation on the Vehicle Actuation System will be used"
-)
+# create roads
+roads = []
+for i in range(roads_count):
+    roads.append([])
 
-# Simulate random vehicles arriving on roads
-for _ in range(random.randrange(5, 60)):
-    vehicle_type = random.choice(list(vehicles.keys()))
-    road_choice = random.choice(['A', 'B', 'C', 'D'])
+# add 50 vehicles
+for i in range(50):
+    road_no = i % roads_count
+    v = random.choice(list(vehicle_time.keys()))
+    roads[road_no].append(v)
 
-    if road_choice == 'A':
-        road_a.append(vehicle_type)
-    elif road_choice == 'B':
-        road_b.append(vehicle_type)
-    elif road_choice == 'C':
-        road_c.append(vehicle_type)
-    else:
-        road_d.append(vehicle_type)
+# show basic info
+print("\nTRAFFIC SIGNAL SIMULATION")
+print("Road Type:", road_type)
+print("Number of Roads:", roads_count)
+print("Total Vehicles: 50\n")
 
-# Print results
-print("Vehicles on Road A:", road_a)
-print("Vehicles on Road B:", road_b)
-print("Vehicles on Road C:", road_c)
-print("Vehicles on Road D:", road_d)
+# show vehicles on each road
+for i in range(roads_count):
+    print("Road", i + 1, "vehicles:", len(roads[i]))
 
-# Simple pygame loop (so the window doesn't close immediately)
-running = True
-while running:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
+print("\nSignal Time for Each Road:")
 
-pygame.quit()
-sys.exit()
+# calculate and print signal time
+for i in range(roads_count):
+    signal_time = (len(roads[i]) / 50) * 60
+    if signal_time < 5:
+        signal_time = 5
+    print("Road", i + 1, ":", round(signal_time, 2), "seconds")
+
+print("\nVehicle crossing time:")
+
+# show vehicle times
+for i in range(roads_count):
+    print("Road", i + 1)
+    for v in roads[i]:
+        print(" ", v, "takes", vehicle_time[v], "seconds")
