@@ -15,10 +15,10 @@ SIM_DURATION = 180
 VEHICLES = {
     "Motorcycle": {"time": 1, "priority": 1, "type": "regular"},
     "Car": {"time": 2, "priority": 1, "type": "regular"},
-    "SUV": {"time": 2, "priority": 1, "type": "regular"},
-    "Van": {"time": 3, "priority": 1, "type": "regular"},
-    "Truck": {"time": 4, "priority": 1, "type": "regular"},
-    "Bus": {"time": 5, "priority": 1, "type": "regular"},
+    "SUV": {"time": 3, "priority": 1, "type": "regular"},
+    "Van": {"time": 4, "priority": 1, "type": "regular"},
+    "Truck": {"time": 5, "priority": 1, "type": "regular"},
+    "Bus": {"time": 6, "priority": 1, "type": "regular"},
     "Ambulance": {"time": 2, "priority": 10, "type": "emergency"},
     "Police": {"time": 2, "priority": 10, "type": "emergency"},
     "Fire Truck": {"time": 3, "priority": 10, "type": "emergency"}
